@@ -24,9 +24,9 @@ RUN apt-get -y install htop aria2 nmap traceroute
 # 3) install packages using notebook user
 USER jovyan
 
-RUN conda install -y scikit-learn
+# RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir networkx scipy geopandas babypandas
+RUN pip install --no-cache-dir networkx scikit-learn scipy geopandas babypandas
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
